@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		  <div class="container">
+		  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+		  	  <span class="navbar-toggler-icon"></span>
+		  	</button>
+		  	<a class="navbar-brand" href="/">Let's Travel</a>
+
+		  	<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+		  	  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+		  	    <li class="nav-item active">
+		  	      <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+		  	    </li>
+		  	    <li class="nav-item">
+		  	      <a class="nav-link" href="#">About Us</a>
+		  	    </li>
+		  	    <li class="nav-item">
+		  	      <a class="nav-link" href="#">Contacts</a>
+				  </li>
+				<li class="nav-item">
+		  	      <a class="nav-link" href="/admin">Admin page</a>
+		  	    </li>
+		  	  </ul>
+		  	  <form class="form-inline my-2 my-lg-0 call-me-form">
+		  	    <input class="form-control mr-sm-2" type="search" placeholder="Phone number" aria-label="Search">
+		  	    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Call me</button>
+		  	  </form>
+		  	</div>
+		  </div>
+		</nav>
+    </header>
+    <main>
+        <div class="container page-wrapper">
+            <h1>Admin page</h1>
+            <hr>
+            <div class="row">
+                <div class="col-3">
+                    <div class="card">
+                        <div class="card-block">
+                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                <a class="nav-link active" id="v-pills-articles-tab" data-toggle="pill" href="#v-pills-articles" role="tab" aria-controls="v-pills-articles" aria-selected="true">Article</a>
+                                <a class="nav-link" id="v-pills-mails-tab" data-toggle="pill" href="#v-pills-mails" role="tab" aria-controls="v-pills-mails" aria-selected="false">Mails</a>
+                                <a class="nav-link" id="v-pills-callback-tab" data-toggle="pill" href="#v-pills-callback" role="tab" aria-controls="v-pills-callback" aria-selected="false">Callback</a>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="card">
+                        <div class="card-block">
+                            <div class="tab-content" id="v-pills-tabContent">
+                                <div class="tab-pane fade show active" id="v-pills-articles" role="tabpanel" aria-labelledby="v-pills-articles-tab">
+                                    <button class="btn btn-primary create-post-btn">
+                                        Add post
+                                    </button>
+                                    <div class="articles">
+                                        
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-mails" role="tabpanel" aria-labelledby="v-pills-mails-tab">...</div>
+                                <div class="tab-pane fade" id="v-pills-callback" role="tabpanel" aria-labelledby="v-pills-callback-tab">Callback requests</div>
+                                <div class="tab-pane fade" id="v-pills-create-post" role="tabpanel" aria-labelledby="v-pills-create-post-tab"><h2>Create post</h2>
+                                    <form action="" id="create-post-form">
+                                        <div class="form-group">
+                                            <label for="create-title">Title</label>
+                                            <input type="text" class="form-control" id="create-title">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="create-country">Country</label>
+                                            <input type="text" class="form-control" id="create-country" placeholder="country">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="create-image-url">Image</label>
+                                            <input type="text" class="form-control" id="create-image-url" placeholder="Url">
+                                            <p>Or</p>
+                                            <input type="file" class="form-control-file form-control" id="create-image-file">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="create-description">Description</label>
+                                            <textarea class="form-control" id="create-description" rows="5"></textarea>
+                                        </div>
+                                        <button class="btn btn-primary">Create post</button>
+                                    </form>
+                                </div>
+                                <!--Update form-->
+
+                                <div class="tab-pane fade" id="v-pills-update-post" role="tabpanel" aria-labelledby="v-pills-update-post-tab"><h2>Update post</h2>
+                                  <form action="" id="update-post-form">
+                                      <div class="form-group">
+                                          <label for="update-title">Title</label>
+                                          <input type="text" class="form-control" id="update-title">
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="update-description">Description</label>
+                                          <textarea class="form-control" id="update-description" rows="5"></textarea>
+                                      </div>
+                                      <button class="btn btn-primary">Update post</button>
+                                  </form>
+                              </div>
+                                
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/post.js"></script>
+    <script src="js/create-post.js"></script>
+    <script src="js/delete-post.js"></script>
+    <script src="js/update-post.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/callback-request.js"></script>
+    <script src="js/emails.js"></script>
+</body>
+</html>
