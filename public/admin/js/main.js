@@ -1,4 +1,5 @@
 let addPostBtn = document.querySelector(".create-post-btn");
+let logOutBtn = document.querySelector(".log-out-btn");
 document.addEventListener('DOMContentLoaded', async function(){
     addPosts();
     addCallbackRequests();
@@ -63,11 +64,17 @@ async function addEmails(){
         <div class="num w5">${i++}</div>
         <input class="id" type="hidden" value="${email.id}">
         <div class="name w30">${email.name}</div>
-        <div class="name w30">${email.email}</div>
+        <div class="email w30">${email.email}</div>
         <div class="date w30">${email.date}</div>
         <div class="remove w5"><button class="btn btn-link btn-remove">X</button></div>
+        <div class="text w100">${email.text}</div>
     </article>`;
     emailBlock.insertAdjacentHTML('beforeEnd', emailHTML);
     
     })
 }
+
+logOutBtn.addEventListener('click', function() {
+    document.cookie.split(";").forEach(function (c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
+    window.location.href = "/";
+})
